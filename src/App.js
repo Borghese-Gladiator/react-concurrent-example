@@ -73,6 +73,10 @@ function App() {
       <Suspense fallback={<Loader />}>
         <UsersList />
       </Suspense>
+      <div>
+        <p>During fetch request for the above list, the following loader was displayed:</p>
+        <Loader />
+      </div>
     </div>
   );
 }
