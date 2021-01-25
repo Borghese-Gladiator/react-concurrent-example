@@ -8,7 +8,14 @@ const Loader = () => <img src={LoadingGIF} alt="Loading" />
 
 function App() {
   return (
-    <div>
+    <div style={{
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center'
+    }}>
+      <h1>React Concurrent Example</h1>
+      <p>The cards below are static imports, but the following list is lazily loaded.</p>
       <h2>
         User cards
       </h2>
