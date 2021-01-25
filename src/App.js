@@ -1,4 +1,5 @@
 import React, { lazy, Suspense } from 'react';
+import ErrorBoundary from './components/ErrorBoundary';
 import { UserCard } from 'react-ui-cards';
 import LoadingGIF from './images/loading.gif';
 import './App.css';
@@ -77,9 +78,11 @@ function App() {
           ]}
         />
       </div>
-      <Suspense fallback={<Loader />}>
-        <UsersList />
-      </Suspense>
+      <ErrorBoundary>
+        <Suspense fallback={<Loader />}>
+          <UsersList />
+        </Suspense>
+      </ErrorBoundary>
       <div>
         <p>During fetch request for the above list, the following loader was displayed:</p>
         <Loader />
