@@ -1,6 +1,6 @@
 # react-concurrent-example
 Example to try React Concurrent Mode
-
+Used React.lazy() and Suspense to lazy load components. Used React error boundaries to catch if loading failed.
 
 
 ## Getting Started with Create React App
